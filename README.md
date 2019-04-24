@@ -2,6 +2,8 @@
 
 StorageOS cluster setup with vagrant and Virtualbox on your localhost.
 
+_Note!_ The ansible roles and code is copied from github.com/storageos/deploy
+
 ## Pre-requisites
 
 To be able to use this project, you must install some software on
