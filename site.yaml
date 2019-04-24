@@ -1,0 +1,6 @@
+---
+- name: Prepare and install StorageOS
+  hosts: all
+  roles:
+    - prerequisites_storageos
+    - install_storageos

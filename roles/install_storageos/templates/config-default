@@ -1,0 +1,17 @@
+# /etc/default/storageos
+
+# Advertise ip is the ip of the machine itself, where the service is being started
+ADVERTISE_IP="{{ advertise_ip | default('127.0.0.1') }}"
+
+# Join variable set to all addresses of the cluster or a join token created from: storageos cluster create
+JOIN="{{ join_list }}"
+
+{% if etcd.type != 'embedded' %}
+KV_BACKEND="etcd"
+KV_ADDR="{{ etcd.addresses }}"
+{% else %}
+KV_BACKEND="embedded"
+{% endif %}
+
+
+LOG_LEVEL=info
